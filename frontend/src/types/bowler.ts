@@ -1,3 +1,5 @@
+// Creates an object of Bowler
+
 export type Bowler = {
   bowlerId: number;
   bowlerFirstName: string;
