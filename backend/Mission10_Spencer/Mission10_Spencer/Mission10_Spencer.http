@@ -1,0 +1,6 @@
+@Mission10_Spencer_HostAddress = http://localhost:5206
+
+GET {{Mission10_Spencer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
