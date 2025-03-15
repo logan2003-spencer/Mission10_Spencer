@@ -45,6 +45,7 @@ function BowlerList () {
   return (
     <>
       <h1>Bowlers</h1>
+      <h2>Below displays the information for the bowlers on the Marlins and Sharks.</h2>
       <table>
         <thead>
           <tr>
