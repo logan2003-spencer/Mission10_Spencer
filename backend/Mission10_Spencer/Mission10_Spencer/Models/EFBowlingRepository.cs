@@ -40,7 +40,7 @@ public class EFBowlingRepository : IBowlingRepository
     public List<Bowler> Bowlers => _context.Bowlers.ToList();
 }
 
-
+// Grabs the bowler teams as well
 public class BowlerWithTeam
     {
         public string BowlerLastName { get; set; }
