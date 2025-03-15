@@ -7,13 +7,14 @@ namespace Mission10_Spencer.Controllers;
 [ApiController]
 public class BowlerController : ControllerBase
 {
-    private readonly IBowlingRepository _repository; // ✅ Use IBowlingRepository
+    private readonly IBowlingRepository _repository; // Use IBowlingRepository
 
-    public BowlerController(IBowlingRepository repository) // ✅ Accept IBowlingRepository
+    public BowlerController(IBowlingRepository repository) // Accept IBowlingRepository
     {
         _repository = repository ?? throw new ArgumentNullException(nameof(repository));
     }
 
+// Calls the method that grabs the bowler teams
     [HttpGet(Name = "GetBowlers")]
     public IActionResult Get()
     {
