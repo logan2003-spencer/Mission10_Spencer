@@ -9,6 +9,7 @@ function BowlerList () {
   // const [teams, setTeams] = useState<Team[]>([]);
 
 
+  // Grabs the bowlers through the url and the specific teams
   useEffect(() => {
     const fetchBowler = async () => {
       const response = await fetch('https://localhost:5003/api/bowler');
@@ -24,24 +25,8 @@ function BowlerList () {
   }, []);
 
 
-  // // Fetch teams
-  // useEffect(() => {
-  //   const fetchTeam = async () => {
-  //     const response = await fetch("https://localhost:5003/api/team");  // Adjust the API endpoint as needed
-  //     const data = await response.json();
-  //     setTeams(data);
-  //   };
-  //   fetchTeam();
-  // }, []);
 
-
-  //   // Join the bowlers with the corresponding team name
-  // const getTeamNameById = (teamId: number | null) => {
-  //   const team = teams.find((team) => team.teamId === teamId);
-  //   return team ? team.teamName : "No Team";
-  // };
-
-
+// Headers and columns names
   return (
     <>
       <h1>Bowlers</h1>
@@ -61,6 +46,7 @@ function BowlerList () {
           </tr>
         </thead>
         <tbody>
+          // The data being called to display on the frontend from the backend
           {
             bowlers.map((f) => (
               <tr key={f.bowlerId}>
